@@ -1,8 +1,9 @@
 <ul>
   @for (food of foods; track $index) {
   <li>
-    <img [src]="food" alt="" />
+    <a href="#">
+      <img [src]="food" alt="" />
+    </a>
   </li>
-
   }
 </ul>
