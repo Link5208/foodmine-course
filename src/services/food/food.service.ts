@@ -80,7 +80,7 @@ export class FoodService {
   }
 
   getAllFoodsByTag(tag: string): Food[] {
-    return tag == 'All'
+    return tag === 'All'
       ? this.getAll()
       : this.getAll().filter((food) => food.tags?.includes(tag));
   }
