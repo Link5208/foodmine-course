@@ -2,13 +2,13 @@ import { Component, inject, OnInit, Pipe } from '@angular/core';
 import { FoodService } from '../../../services/food/food.service';
 import { Food } from '../../shared/models/Food';
 import { CurrencyPipe } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { TagsComponent } from '../tags/tags.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CurrencyPipe, SearchComponent, TagsComponent],
+  imports: [CurrencyPipe, SearchComponent, TagsComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

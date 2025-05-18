@@ -3,3 +3,8 @@
   <a routerLink="/tag/{{ tag.name }}">{{ tag.name }}({{ tag.count }})</a>
   } }
 </div>
+<div>
+  @if (foodPageTags) { @for (tagName of foodPageTags; track $index) {
+  <a routerLink="/tag/{{ tagName }}">{{ tagName }}</a>
+  } }
+</div>

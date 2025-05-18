@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { Tag } from '../../shared/models/Tag';
 import { RouterLink } from '@angular/router';
 import { FoodService } from '../../../services/food/food.service';
@@ -10,11 +10,13 @@ import { FoodService } from '../../../services/food/food.service';
   styleUrl: './tags.component.css',
 })
 export class TagsComponent implements OnInit {
-  tags: Tag[] = [];
-
+  tags?: Tag[];
+  @Input() foodPageTags?: string[];
   private foodService = inject(FoodService);
 
   ngOnInit(): void {
-    this.tags = this.foodService.getAllTags();
+    if (!this.foodPageTags) {
+      this.tags = this.foodService.getAllTags();
+    }
   }
 }
