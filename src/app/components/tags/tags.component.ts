@@ -12,6 +12,7 @@ import { FoodService } from '../../../services/food/food.service';
 export class TagsComponent implements OnInit {
   tags?: Tag[];
   @Input() foodPageTags?: string[];
+  @Input() justifyContent: string = 'center';
   private foodService = inject(FoodService);
 
   ngOnInit(): void {
