@@ -5,10 +5,17 @@ import { CurrencyPipe } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { TagsComponent } from '../tags/tags.component';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CurrencyPipe, SearchComponent, TagsComponent, RouterLink],
+  imports: [
+    CurrencyPipe,
+    SearchComponent,
+    TagsComponent,
+    RouterLink,
+    NotFoundComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

@@ -2,13 +2,14 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FoodService } from '../../../services/food/food.service';
 import { TagsComponent } from '../tags/tags.component';
-import { CurrencyPipe } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { CartService } from '../../../services/cart/cart.service';
 import { Food } from '../../shared/models/Food';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 @Component({
   selector: 'app-food-page',
-  imports: [TagsComponent, CurrencyPipe],
+  imports: [TagsComponent, CurrencyPipe, CommonModule, NotFoundComponent],
   templateUrl: './food-page.component.html',
   styleUrl: './food-page.component.css',
 })

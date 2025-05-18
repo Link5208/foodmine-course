@@ -3,11 +3,12 @@ import { CartService } from '../../../services/cart/cart.service';
 import { Cart } from '../../shared/models/Cart';
 import { CartItem } from '../../shared/models/CartItem';
 import { RouterLink } from '@angular/router';
-import { CurrencyPipe } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 @Component({
   selector: 'app-cart-page',
-  imports: [RouterLink, CurrencyPipe],
+  imports: [RouterLink, CurrencyPipe, CommonModule, NotFoundComponent],
   templateUrl: './cart-page.component.html',
   styleUrl: './cart-page.component.css',
 })
